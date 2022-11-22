@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\sivas\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sivas\\.nuget\\packages"
+    ]
+  }
+}
