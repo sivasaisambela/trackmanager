@@ -75,7 +75,12 @@ C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\obj\Debug\netcoreapp3.1\Ta
 C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\obj\Debug\netcoreapp3.1\TaskManagerCore.dll
 C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\obj\Debug\netcoreapp3.1\TaskManagerCore.pdb
 C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\obj\Debug\netcoreapp3.1\TaskManagerCore.genruntimeconfig.cache
-C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\obj\Debug\netcoreapp3.1\TaskManagerCore.csproj.AssemblyReference.cache
 C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\sivas\source\repos\.NET CORE\TaskManagerCore\obj\Debug\netcoreapp3.1\TaskManagerCore.csproj.AssemblyReference.cache

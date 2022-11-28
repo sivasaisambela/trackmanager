@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TaskManagerCore.Data;
+using TaskManagerCore.Identity;
 using TaskManagerCore.Models;
 
 namespace TaskManagerCore.Controllers

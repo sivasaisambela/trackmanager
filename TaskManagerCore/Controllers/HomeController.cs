@@ -18,6 +18,9 @@ namespace TaskManagerCore.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        [Route("")]
+        [Route("home/index")]
         public IActionResult Index()
         {
             return View();
