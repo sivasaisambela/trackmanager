@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -74,49 +75,67 @@ namespace TaskManagerCore
 
             app.UseRouting();
             app.UseAuthentication();
-            app.UseAuthorization();
+           // app.UseAuthorization();
             IServiceScopeFactory serviceScopeFactory = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
             using (IServiceScope scope = serviceScopeFactory.CreateScope())
             {
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
-                //Create Admin Role
-                if (!(await roleManager.RoleExistsAsync("Admin")))
-                {
-                    var role = new ApplicationRole();
+                ////Create Admin Role
+                //if (!(await roleManager.RoleExistsAsync("Admin")))
+                //{
+                //    var role = new ApplicationRole();
                     
-                    role.Name = "Admin";
-                    await roleManager.CreateAsync(role);
-                }
+                //    role.Name = "Admin";
+                //    await roleManager.CreateAsync(role);
+                //}
 
-                //Create Admin User
-                if ((await userManager.FindByNameAsync("Admin")) == null)
-                {
-                    var user = new ApplicationUser();
-                    user.UserName = "admin";
-                    user.Email = "admin@gmail.com";
-                    var userPassword = "Admin12#";
-                    var chkUser = await userManager.CreateAsync(user, userPassword);
-                    if (chkUser.Succeeded)
-                    {
-                        await userManager.AddToRoleAsync(user, "Admin");
-                    }
-                }
+                ////Create Admin User
+                //if ((await userManager.FindByNameAsync("Admin")) == null)
+                //{
+                //    var user = new ApplicationUser();
+                //    user.UserName = "admin";
+                //    user.Email = "admin@gmail.com";
+                //    var userPassword = "Admin12#";
+                //    var chkUser = await userManager.CreateAsync(user, userPassword);
+                //    if (chkUser.Succeeded)
+                //    {
+                //        await userManager.AddToRoleAsync(user, "Admin");
+                //    }
+                //}
 
-                //Create Employee Role
-                if (!(await roleManager.RoleExistsAsync("Employee")))
-                {
-                    var role = new ApplicationRole();
-                    role.Name = "Employee";
-                    await roleManager.CreateAsync(role);
-                }
+                ////Create Employee Role
+                //if (!(await roleManager.RoleExistsAsync("Employee")))
+                //{
+                //    var role = new ApplicationRole();
+                //    role.Name = "Employee";
+                //    await roleManager.CreateAsync(role);
+                //}
             }
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            if (env.IsDevelopment())
+
+            {
+
+                app.UseDeveloperExceptionPage();
+
+            }
+
+
+
+            app.Run(async (context) =>
+
+            {
+
+                await context.Response.WriteAsync("Hello World!");
+
             });
         }
 
